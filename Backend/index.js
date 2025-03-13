@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose"
 import dotenv from "dotenv";
 import Router from "./src/router/authRouter.router.js";
+import router from "./src/router/coutses.router.js";
 
 dotenv.config();
 
@@ -9,7 +10,7 @@ const app=express();
 app.use(express.json())
 
 app.use("/auth",Router)
-
+app.use("/courses",router)
 
 const port=process.env.PORT || 5000;
 
