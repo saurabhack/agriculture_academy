@@ -1,15 +1,19 @@
 import mongoose from "mongoose";
-import chapterSchema from "./chapters.model.js";
 
 const practiceQuestionsSchema=new mongoose.Schema({
-    practiceQuestion:[{type:String}],
+    question:{
+        type:String,
+        required:true
+    },
+    options:[{type:String}],
     correctAnswer:{
         type:String,
     },
     connectedChapter:{
-        type:mongoose.Schema.Types.ObjectId , ref: chapterSchema
+        type:mongoose.Schema.Types.ObjectId, 
+        ref: "Chapters"
     }
 })
 
-const PracticeModel=mongoose.model("practiceModel",PracticeModel)
+const PracticeModel=mongoose.model("PracticeModel",practiceQuestionsSchema)
 export default PracticeModel

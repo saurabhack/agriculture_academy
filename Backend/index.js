@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose"
 import dotenv from "dotenv";
 import Router from "./src/router/authRouter.router.js";
-import router from "./src/router/coutses.router.js";
+import router from "./src/router/courses.router.js";
 
 dotenv.config();
 

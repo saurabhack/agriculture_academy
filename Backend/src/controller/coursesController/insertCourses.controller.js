@@ -10,7 +10,8 @@ async function insertCourses(req,res){
         if(!data){
             return res.json({message:"something went wrong"})
         }
-        return res.json({message:"course inserted successfully"})
+        console.log(data)
+        return res.json({message:"course inserted successfully",data})
 
     }catch(error){
         console.error("something went wrong:",error)
