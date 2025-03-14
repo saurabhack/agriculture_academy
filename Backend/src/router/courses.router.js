@@ -6,6 +6,7 @@ import insertPracticeQuestions from "../controller/coursesController/insertPract
 import parchaseCourses from "../controller/coursesController/parchaseCourses.controller.js"
 import coursesChapter from "../controller/coursesController/coursesChapters.controller.js"
 import questions from "../controller/coursesController/questions.controller.js"
+import evaluation from "../controller/coursesController/evaluation.controller.js"
 const router=express.Router()
 
 router.post('/createCourse',insertCourses)
@@ -15,4 +16,5 @@ router.post('/createContent/:id',insertContent)
 router.post('/parchaseCourse/:id',parchaseCourses)
 router.get("/chapters/:id",coursesChapter)
 router.get("/questions/:id",questions)
+router.post("/evaluation/:id",evaluation)
 export default router
